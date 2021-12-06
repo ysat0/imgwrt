@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
       return 1;
     }
     if (rsize > 0) {
-      _dos_diskwrt(buf, drv, size / 0x400, rsize / 0x400);
+      _dos_diskwrt2(buf, drv, size / 0x400, rsize / 0x400);
       size += rsize;
     }
   } while(rsize == sizeof(buf));
